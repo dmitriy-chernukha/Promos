@@ -24,9 +24,7 @@ protocol UserListViewModelProtocol: AnyObject  {
 class UserListViewModel: UserListViewModelProtocol {
     
     let apiService: APIServiceProtocol
-    
-    var isLoading = false
-    
+        
     private(set) var users: [User] = [] {
         didSet {
             self.bindViewModelToController()
@@ -40,9 +38,7 @@ class UserListViewModel: UserListViewModelProtocol {
     }
     
     func fetchUsers() {
-        self.isLoading = true
         apiService.getUsers {[weak self] result in
-            self?.isLoading = true
             switch result {
             case .success(let users):
                 self?.users = users?.sorted{$0.username < $1.username} ?? []

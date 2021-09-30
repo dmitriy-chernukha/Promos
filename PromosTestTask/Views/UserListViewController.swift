@@ -51,7 +51,7 @@ class UserListViewController: UIViewController {
         }
     }
     
-    @IBAction func cortedChanged(_ sender: UISegmentedControl) {
+    @IBAction func sortChanged(_ sender: UISegmentedControl) {
         viewModel.sortUser(sort: sender.selectedSegmentIndex == 0 ? .userName : .id );
     }
 }

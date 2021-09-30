@@ -36,7 +36,7 @@
                                                 <segment title="User ID"/>
                                             </segments>
                                             <connections>
-                                                <action selector="cortedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RPc-21-WOT"/>
+                                                <action selector="sortChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="APZ-10-Q0L"/>
                                             </connections>
                                         </segmentedControl>
                                     </subviews>
